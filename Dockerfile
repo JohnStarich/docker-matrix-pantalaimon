@@ -16,4 +16,4 @@ ENV CONFIG_local-matrix.SSL=False
 ENV CONFIG_local-matrix.UseKeyring=False
 ENV CONFIG_local-matrix.IgnoreVerification=True
 
-ENTRYPOINT ["/env2config", "pantalaimon", "--config", "/config/pantalaimon.conf", "--data-path", "/data/pan.db"]
+ENTRYPOINT ["/env2config", "pantalaimon", "--config", "/config/pantalaimon.conf", "--data-path", "/data"]
