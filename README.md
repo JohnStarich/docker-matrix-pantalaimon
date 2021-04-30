@@ -17,8 +17,10 @@ Do **_NOT_** expose pantalaimon's port to your Matrix users. It must only be acc
 ### Docker
 
 ```bash
+# Remember to block the port from your Matrix users
 docker run --rm -it \
     --name pantalaimon \
+    -p "8008:8008" \
     -e MATRIX_URL=https://example.com \
     -v pantalaimon:/data \
     johnstarich/matrix-pantalaimon:0.9.2_20210425
@@ -32,6 +34,9 @@ version: "3"
 services:
   pantalaimon:
     image: johnstarich/matrix-pantalaimon:0.9.2_20210425
+    # Remember to block the port from your Matrix users
+    ports:
+    - "8008:8008"
     environment:
     - MATRIX_URL=https://example.com
     volumes:
