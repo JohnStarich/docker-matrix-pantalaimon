@@ -1,4 +1,4 @@
-FROM matrixdotorg/pantalaimon:v0.10.0
+FROM matrixdotorg/pantalaimon:v0.10.4
 
 COPY --from=johnstarich/env2config:v0.1.4 /env2config /
 RUN mkdir -p /config
