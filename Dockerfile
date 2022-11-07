@@ -1,6 +1,6 @@
-FROM matrixdotorg/pantalaimon:v0.10.4
+FROM matrixdotorg/pantalaimon:v0.10.5
 
-COPY --from=johnstarich/env2config:v0.1.4 /env2config /
+COPY --from=johnstarich/env2config:v0.1.6 /env2config /
 RUN mkdir -p /config
 ENV E2C_CONFIGS=config
 
